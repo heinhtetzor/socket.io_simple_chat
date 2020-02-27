@@ -7,7 +7,7 @@ app.use('/chat', (req, res) => {
 })
 app.use(express.static('public'));
 
-const server = app.listen(3000, '0.0.0.0', () => console.log("connected"));
+const server = app.listen(process.env.PORT || 3000, () => console.log("connected"));
 
 //socket.io setup
 const io = socket(server);
