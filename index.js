@@ -11,6 +11,12 @@ const server = app.listen(process.env.PORT || 3000, () => console.log("connected
 
 //socket.io setup
 const io = socket(server);
+
+io.configure(function () { 
+    io.set("transports", a["xhr-polling"]); 
+    io.set("polling duration", 10); 
+  });
+  
 io.on('connection', function(socket){
     console.log("Connection has been made."+socket.id);
     socket.on('chat', function(data){
