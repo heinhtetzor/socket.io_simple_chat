@@ -3,7 +3,7 @@
 //const socket = io.connect('http://localhost:3000');
 //const socket = io.connect('http://172.17.164.197:3000/');
 //setting for heroku
-const socket = io.connect('https://glacial-falls-23683.herokuapp.com/27268/socket.io/?EIO=4&transport=websocket');
+const socket = io.connect('https://glacial-falls-23683.herokuapp.com/socket.io/?EIO=4&transport=websocket');
 //Query DOM
 const handle = document.getElementById('handle');
 const message = document.getElementById('message');
